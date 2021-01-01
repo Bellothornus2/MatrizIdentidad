@@ -1,7 +1,10 @@
 def es_matriz_identidad(matriz):
-    assert len(matriz[0]) == len(matriz) and isinstance(matriz, list)
-    length_matriz_row = len(matriz)
+    try:
+        assert len(matriz[0]) == len(matriz) and isinstance(matriz, list)
+    except AssertionError:
+        return AssertionError
 
+    length_matriz_row = len(matriz)
     acumulator = 0
     answer = None
 
