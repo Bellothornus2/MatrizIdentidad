@@ -15,7 +15,7 @@ def test_simple_correcto():
             [0,1,0,0],
             [0,0,1,0],
             [0,0,0,1]]
-    assert(print (es_matriz_identidad(matrix1))==True)
+    assert(es_matriz_identidad(matrix1)==True)
     #>>>True
 
 def test_simple_incorrecto():
@@ -23,7 +23,7 @@ def test_simple_incorrecto():
             [0,1,0],
             [0,0,0]]
 
-    assert (print(es_matriz_identidad(matrix2)) == False)
+    assert (es_matriz_identidad(matrix2) == False)
     
     #>>>False
 
@@ -32,7 +32,7 @@ def test_dos_incorrecto():
             [0,2,0],
             [0,0,2]]
 
-    assert(print (es_matriz_identidad(matrix3)) ==False)
+    assert(es_matriz_identidad(matrix3) ==False)
     #>>>False
 
 def test_no_diagonal_incorrecto():
@@ -41,14 +41,14 @@ def test_no_diagonal_incorrecto():
             [0,0,1,0],  
             [0,0,0,1]]
 
-    assert(print (es_matriz_identidad(matrix6)) == False)
+    assert(es_matriz_identidad(matrix6) == False)
     #>>>False
 
 def test_uno_negativo_incorrecto():
     matrix7 = [[1, -1, 1],
             [0, 1, 0],
             [0, 0, 1]]
-    assert(print (es_matriz_identidad(matrix7)) == False)
+    assert(es_matriz_identidad(matrix7) == False)
     #>>>False           
 
 
@@ -59,11 +59,11 @@ def test_no_cuadrado():
             [0,1,1,0],
             [0,0,0,1]]
 
-    assert(print (es_matriz_identidad(matrix4)) == False)
+    assert(es_matriz_identidad(matrix4) == AssertionError)
     #>>>False
 
 def test_matriz_linear():
     matrix5 = [[1,0,0,0,0,0,0,0,0]]
 
-    assert(print (es_matriz_identidad(matrix5)) == False)
+    assert(es_matriz_identidad(matrix5) == AssertionError or False)
     #>>>False           
